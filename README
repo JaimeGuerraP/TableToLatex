@@ -1,0 +1,26 @@
+Prerequisites
+
+Make sure you have python3 installed on your system. 
+
+To install:
+
+1) mkdir ~/.myPrograms (if it doesn't already exist)
+2) cd ~/.myPrograms
+3) Make sure that TableToLatex.sh is an executable
+4) ln -s route/directory/for/TableToLatex.sh TableToLatex
+5) Add the following line at the end of your .bashrc (or .zshrc ...):
+
+             export PATH=$PATH:~/.myPrograms
+
+Any new terminal (or after sourcing the current one) should be able to
+run TableToLatex.
+
+To run TableToLatex you should introduce the table through a pipe, e.g.:
+
+cat Outfile.txt | TableToLatex
+
+and you should obtain LatexTableFile.tex.
+
+WARNING: This script overwrites to the same file. Please, 
+rename the file after being created.
+
